@@ -1,7 +1,27 @@
 import "./App.css";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import ErrorPage from "./Routes/Error/ErrorPage";
+import NoMatch from "./Routes/Error/NoMatch";
+import IndexPage from "./Routes/IndexPage/IndexPage";
+import Impressum from "./Routes/Impressum/Impressum";
 
 function App() {
-  return <h1 className="text-3xl font-bold underline">Hello world!</h1>;
+  const router = createBrowserRouter(
+    [
+      {
+        path: "/",
+        errorElement: <ErrorPage />,
+        children: [
+          { path: "/", element: <IndexPage /> },
+          { path: "/Impressum", element: <Impressum /> },
+          { path: "*", element: <NoMatch /> },
+        ],
+      },
+    ],
+    { basename: "/Portfolio" }
+  );
+
+  return <RouterProvider router={router} />;
 }
 
 export default App;
