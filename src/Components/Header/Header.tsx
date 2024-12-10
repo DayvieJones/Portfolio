@@ -1,6 +1,6 @@
 export default function Header() {
   return (
-    <div className="flex bg-slate-500 w-full h-20  bg-opacity-10 backdrop-blur-lg items-center justify-end">
+    <div className="flex fixed bg-slate-500 w-full h-20  bg-opacity-10 backdrop-blur-lg items-center justify-end">
       <div className="flex gap-6 bg-transparent mr-4">
         <span className="">
           <a href="https://github.com/DayvieJones" target="_blank">

@@ -1,9 +1,9 @@
 export default function Navbar() {
   return (
-    <div className="flex gap-8 justify-center mt-10 text-slate-300 ">
+    <footer className="sticky flex gap-8 justify-center mt-24 text-slate-300 ">
       <div>
-        <a href="#hero" className="border-b-1 hover:text-slate-100">
-          <span >Hero</span>
+        <a href="#start" className="border-b-1 hover:text-slate-100">
+          <span>Start</span>
         </a>
       </div>
       <div>
@@ -21,6 +21,6 @@ export default function Navbar() {
           <span>Contact</span>
         </a>
       </div>
-    </div>
+    </footer>
   );
 }
