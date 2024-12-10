@@ -1,23 +1,26 @@
 // import techLogo from "../../../public/techs.png";
 
+import Button from "../../Components/Button/Button";
 import Header from "../../Components/Header/Header";
 import Navbar from "../../Components/Navbar/Navbar";
 
 export default function IndexPage() {
   return (
-    <div className="container">
+    <div>
       <Header />
-      <div className="flex flex-col text-slate-300">
-        <div className="flex flex-col justify-center items-center">
-          <h2 className="mt-3">Hey, ich bin David</h2>
-          <h1>Frontend Developer</h1>
-          <p>Willkommen auf meinem Portfolio</p>
-          <div>
-            <a href="#about" className="text-slate-300 hover:text-slate-50">
-              Über mich
-            </a>
+      <div className="container">
+        <div className="flex flex-col text-slate-300">
+          <div id="start" className="flex flex-col justify-center items-center">
+            <h2 className="mt-5">Hey, ich bin David</h2>
+            <h1 className="mt-5">Frontend Developer</h1>
+            <p className="mt-5" >Willkommen in meinem Portfolio</p>
+            <Button />
+
+            {/* <div>
+          <img src={techLogo} alt="tech logo" />
+        </div> */}
           </div>
-          <div className="opacity-0">
+          <div className="flex flex-col justify-center items-center opacity-1">
             About
             <div>
               <img src="" alt="Profile picture" />
@@ -29,18 +32,14 @@ export default function IndexPage() {
                 gebastelt. Schon dort bemerkte ich mein starkes interesse an der
                 programmierung.
               </p>
-
               <div>Tech Stack</div>
               <div>
                 <a href="">Projekte betrachten</a>
               </div>
             </div>
           </div>
-          {/* <div>
-          <img src={techLogo} alt="tech logo" />
-        </div> */}
+          <Navbar />
         </div>
-        <Navbar />
       </div>
     </div>
   );
@@ -51,9 +50,9 @@ Aufbau:
 
 #Hero Section
     -Header
-      -LinkedIn
-      -GitHub
-      -Email
+      -LinkedIn x
+      -GitHub x
+      -Email x
       (Statisch)
     -Einleitungssatz
       -Button to #about

@@ -5,11 +5,4 @@ import react from "@vitejs/plugin-react";
 export default defineConfig({
   base: "/Portfolio",
   plugins: [react()],
-  server: {
-    host: true, // Zugriff von externen Geräten erlauben (z.B. über LAN)
-    port: 3000, // Standard-Port (kann bei Bedarf geändert werden)
-    watch: {
-      usePolling: true, // Nutzt Dateisystem-Polling, falls Hot-Reload-Probleme bestehen
-    },
-  },
 });
