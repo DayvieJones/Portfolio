@@ -34,7 +34,7 @@ export default function Project({
         <div className=" w-full h-[1px] bg-cyan-600"></div>
       </div>
       <div
-        className="w-full h-52 bg-no-repeat bg-center bg-cover rounded-lg lg:hover:scale-110 lg:transition-transform lg:duration-[500ms]"
+        className="w-full h-52 bg-top bg-center bg-cover rounded-lg lg:hover:scale-110 lg:transition-transform lg:duration-[500ms]"
         style={{ backgroundImage: `url(${picturePreview})` }}
         role="img"
         aria-label={altText}
