@@ -12,8 +12,8 @@ function App() {
         path: "/",
         errorElement: <ErrorPage />,
         children: [
-          { path: "/", element: <IndexPage /> },
-          { path: "/Impressum", element: <Impressum /> },
+          { path: "", element: <IndexPage /> },
+          { path: "Impressum", element: <Impressum /> },
           { path: "*", element: <NoMatch /> },
         ],
       },
