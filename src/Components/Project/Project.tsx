@@ -28,7 +28,7 @@ export default function Project({
   }
 
   return (
-    <div className="flex flex-col bg-slate-600 mt-10 p-3 border rounded-lg  border-cyan-500 lg:w-[450px] w-96 lg:hover:scale-105 transition-all">
+    <div className="flex flex-col bg-slate-600 mt-10 p-3 border rounded-lg border-cyan-500 lg:w-[450px] w-96 lg:hover:scale-105 transition-all">
       <div className="flex items-center gap-3 mb-3 ml-2">
         <h2 className="text-2xl text-nowrap ">{projectTitle}</h2>
         <div className=" w-full h-[1px] bg-cyan-600"></div>

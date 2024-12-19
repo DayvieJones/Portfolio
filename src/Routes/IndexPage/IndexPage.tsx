@@ -260,7 +260,7 @@ export default function IndexPage() {
                   </svg>
                   David.Johrden@gmail.com
                 </a>
-                <p className="mt-5 text-start">Sie finden mich auch auf: </p>
+                <p className="mt-5 text-start">Sie finden mich auch auf </p>
                 <div className="flex gap-6 mt-2 lg:mt-2 lg:gap-3">
                   <a
                     href="https://www.linkedin.com/in/david-johrden/"
