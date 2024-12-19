@@ -2,7 +2,7 @@ export default function Impressum() {
   return (
     <div className="bg-slate-900 text-white h-screen flex flex-col">
       {/* Zurück-Link */}
-      <a href="." className="flex gap-2 m-4">
+      <a href="./#start" className="flex gap-2 m-4">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -37,7 +37,7 @@ export default function Impressum() {
       </div>
       {/* Footer */}
       <div className="bg-slate-950 px-6 text-center py-4 text-slate-400 text-sm">
-        <a href="./impressum.html" className="mr-4">
+        <a href="./Impressum" className="mr-4">
           Impressum
         </a>
         <span>© David Johrden 2024</span>
