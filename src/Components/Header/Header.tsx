@@ -2,13 +2,13 @@ import Navbar from "../Navbar/Navbar";
 
 export default function Header() {
   return (
-    <div className="flex fixed top-0 z-30 bg-slate-500 w-full h-20 bg-opacity-10 backdrop-blur-lg items-center ">
+    <div className="flex sticky top-0 z-30  bg-black w-full h-20 bg-opacity-10 backdrop-blur-lg items-center ">
       <div className="flex w-full justify-between items-center px-3">
-        <div className="flex">
+        <div className="flex lg:ml-10">
           <Navbar />
         </div>
         {/* Socials */}
-        <div className="flex gap-4 bg-transparent  justify-end">
+        <div className="flex gap-4 bg-transparent justify-end lg:mr-10">
           {/* Github */}
           <span>
             <a href="https://github.com/DayvieJones" target="_blank">

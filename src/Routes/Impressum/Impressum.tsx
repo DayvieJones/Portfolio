@@ -21,9 +21,22 @@ export default function Impressum() {
       </a>
 
       {/* Hauptinhalt */}
+      <div className="text-center flex-grow">
+        <h2 className="text-3xl lg:text-4xl font-bold mt-28">Impressum</h2>
 
+        <h3 className="text-xl lg:text-2xl font-bold mt-8">
+          Angaben gemäß § 5 TMG
+        </h3>
+        <p>David Johrden</p>
+        <p>Frankfurter Str. 104</p>
+        <p>53480 Troisdorf</p>
+
+        <h3 className="text-xl lg:text-2xl font-bold mt-8">Kontakt</h3>
+        <p>Telefon: +49 170 6811630</p>
+        <p>E-Mail: david.johrden@gmail.com</p>
+      </div>
       {/* Footer */}
-      <div className="bg-slate-800 px-6 text-center py-4 text-slate-400 text-sm">
+      <div className="bg-slate-950 px-6 text-center py-4 text-slate-400 text-sm">
         <a href="./impressum.html" className="mr-4">
           Impressum
         </a>

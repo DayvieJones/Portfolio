@@ -9,6 +9,7 @@ interface ProjectInterface {
   altText: string;
   githubLink: string;
   projectLink: string;
+  techStack?: { [key: string]: string };
 }
 
 export default function Project({
@@ -18,30 +19,35 @@ export default function Project({
   altText,
   githubLink,
   projectLink,
+  techStack = {},
 }: ProjectInterface) {
+  function renderTechStack(techStack: { [key: string]: string }) {
+    return Object.keys(techStack).map((key) => (
+      <TechStack key={key} content={techStack[key]} />
+    ));
+  }
+
   return (
-    <div className="bg-slate-600 mt-10 rounded-lg p-2 border border-cyan-500">
+    <div className="flex flex-col bg-slate-600 mt-10 p-3 border rounded-lg  border-cyan-500 lg:w-[450px] w-96 lg:hover:scale-105 transition-all">
       <div className="flex items-center gap-3 mb-3 ml-2">
-        <h2 className="text-xl ">{projectTitle}</h2>
-        <div className=" w-[53%] h-[1px] bg-cyan-600"></div>
+        <h2 className="text-2xl text-nowrap ">{projectTitle}</h2>
+        <div className=" w-full h-[1px] bg-cyan-600"></div>
       </div>
-      <div>
-        <img
-          className="bg-center bg-no-repeat bg-cover rounded-lg"
-          src={picturePreview}
-          alt={altText}
-        />
-        <div className="flex flex-wrap gap-2 mt-4 mb-2">
-          {"<"}
-          <TechStack content={"HTML"} />
-          <TechStack content={"CSS"} />
-          {"/>"}
-        </div>
-        <p>{textContent}</p>
-        <div className="flex gap-4 mr-3 mb-1 items-center justify-end">
-          <ProjectButton projectButtonLink={projectLink} />
-          <CodeButton codeButtonLink={githubLink} />
-        </div>
+      <div
+        className="w-full h-52 bg-no-repeat bg-center bg-cover rounded-lg lg:hover:scale-110 lg:transition-transform lg:duration-[500ms]"
+        style={{ backgroundImage: `url(${picturePreview})` }}
+        role="img"
+        aria-label={altText}
+      ></div>
+      <div className="flex flex-wrap gap-2 mt-4 mb-2">
+        {"<"}
+        {renderTechStack(techStack)}
+        {"/>"}
+      </div>
+      <p className="lg:text-lg">{textContent}</p>
+      <div className="flex gap-4 mr-3 mb-1 items-center justify-end">
+        <ProjectButton projectButtonLink={projectLink} />
+        <CodeButton codeButtonLink={githubLink} />
       </div>
     </div>
   );

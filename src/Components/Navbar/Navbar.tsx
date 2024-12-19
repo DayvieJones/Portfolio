@@ -13,7 +13,7 @@ export default function Navbar() {
           }
         });
       },
-      { threshold: 0.35 } // 35% sobald der Sektion sichtbar ist
+      { threshold: 0.3 } // 30% sobald der Sektion sichtbar ist
     );
 
     sections.forEach((section) => observer.observe(section));
@@ -21,13 +21,13 @@ export default function Navbar() {
   }, []);
 
   return (
-    <div className="flex ml-2 gap-4 text-slate-300 z-30">
+    <div className="flex ml-2 gap-3 text-lg lg:text-xl lg:gap-8 text-slate-300 z-30">
       <div>
         <a
           href="#start"
           className={`border-b-1 transition-colors ${
             activeSection === "start"
-              ? "text-cyan-400 font-semibold"
+              ? "text-cyan-400 font-semibold hover:text-cyan-300"
               : "hover:text-slate-100"
           }`}
         >
@@ -39,7 +39,7 @@ export default function Navbar() {
           href="#about"
           className={`border-b-1 transition-colors ${
             activeSection === "about"
-              ? "text-cyan-400 font-semibold"
+              ? "text-cyan-400 font-semibold hover:text-cyan-300"
               : "hover:text-slate-100"
           }`}
         >
@@ -51,7 +51,7 @@ export default function Navbar() {
           href="#projects"
           className={`border-b-1 transition-colors ${
             activeSection === "projects"
-              ? "text-cyan-400 font-semibold"
+              ? "text-cyan-400 font-semibold hover:text-cyan-300"
               : "hover:text-slate-100"
           }`}
         >
@@ -63,7 +63,7 @@ export default function Navbar() {
           href="#contact"
           className={`border-b-1 transition-colors ${
             activeSection === "contact"
-              ? "text-cyan-400 font-semibold"
+              ? "text-cyan-400 font-semibold hover:text-cyan-300"
               : "hover:text-slate-100"
           }`}
         >
