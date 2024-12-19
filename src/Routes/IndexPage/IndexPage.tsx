@@ -70,7 +70,7 @@ export default function IndexPage() {
             </h2>
             <div className="w-full h-[1px] bg-cyan-600"></div>
           </div>
-          <div className="flex flex-col md:flex-row  items-center md:gap-8 lg:mt-20">
+          <div className="flex flex-col md:flex-row justify-center items-center md:gap-10 lg:mt-20">
             <img
               className="w-52 h-52 rounded-full p-4 mb-6 object-cover md:mb-0 w- md:w-60 md:h-60"
               src={avatar}
@@ -306,7 +306,7 @@ export default function IndexPage() {
           </div>
         </section>
         <footer className="relative bottom-0 py-4 mt-5 w-full bg-slate-950 text-center text-slate-400 text-sm">
-          <a href="./Impressum" className="mr-4">
+          <a href="./Portfolio/Impressum" className="mr-4">
             Impressum
           </a>
           <span>© David Johrden 2024</span>
@@ -315,50 +315,3 @@ export default function IndexPage() {
     </div>
   );
 }
-
-/*
-Aufbau:
-
-#Hero Section
-    -Header
-      -LinkedIn
-      -GitHub
-      -Email
-      (Statisch)
-    -Einleitungssatz
-      -Button to #about
-    -Navbar
-      -Als roter Faden auf der Seite
-      -Aussehen wie Balken
-        Wenn im Bereich, Blaken farbe/größe ändern
-        Mobile: header
-        Large: links
-
-#About Me
-  -Wer bin ich
-  -Wo komme ich her
-  -Micro controller
-  -Leidenschaft
-  -Ziel
-  -TechStack
-    -logos
-
-#Projects
-  -Techs im Projekt
-  -Sushi Restaurant
-  -WeatherApp
-  -NoteApp
-  -userAdministration
-
-#Contact
-    -LinkedIn
-    -GitHub
-    -Email
-    -Xing
-
-Design
-  -Background
-    (Space)
-    Mouse interaktiv
-    Smooth scrolling
-*/
