@@ -30,21 +30,21 @@ export default function Project({
   return (
     <div className="flex flex-col bg-slate-600 mt-10 p-3 border rounded-lg border-cyan-500 lg:w-[450px] w-96 lg:hover:scale-105 transition-all">
       <div className="flex items-center gap-3 mb-3 ml-2">
-        <h2 className="text-2xl text-nowrap ">{projectTitle}</h2>
+        <h2 className="text-2xl lg:my-3 text-nowrap ">{projectTitle}</h2>
         <div className=" w-full h-[1px] bg-cyan-600"></div>
       </div>
       <div
-        className="w-full h-52 bg-top bg-center bg-cover rounded-lg lg:hover:scale-110 lg:transition-transform lg:duration-[500ms]"
+        className="w-full h-52 bg-top  bg-cover rounded-lg lg:mb-5 lg:hover:scale-110 lg:transition-transform lg:duration-[500ms]"
         style={{ backgroundImage: `url(${picturePreview})` }}
         role="img"
         aria-label={altText}
       ></div>
-      <div className="flex flex-wrap gap-2 mt-4 mb-2">
+      <div className="flex flex-wrap gap-2 mt-4 mb-2 lg:mb-5">
         {"<"}
         {renderTechStack(techStack)}
         {"/>"}
       </div>
-      <p className="lg:text-lg">{textContent}</p>
+      <p className="lg:text-lg lg:mb-5">{textContent}</p>
       <div className="flex gap-4 mr-3 mb-1 items-center justify-end">
         <ProjectButton projectButtonLink={projectLink} />
         <CodeButton codeButtonLink={githubLink} />

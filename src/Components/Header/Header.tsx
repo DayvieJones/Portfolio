@@ -8,7 +8,7 @@ export default function Header() {
           <Navbar />
         </div>
         {/* Socials */}
-        <div className="flex gap-4 bg-transparent justify-end lg:mr-10">
+        <div className="flex gap-4 bg-transparent justify-end lg:gap-8 lg:mr-10">
           {/* Github */}
           <span>
             <a href="https://github.com/DayvieJones" target="_blank">

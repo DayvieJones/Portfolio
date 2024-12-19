@@ -7,7 +7,7 @@ export default function ProjectButton({
   projectButtonLink,
 }: ProjectButtonInterface) {
   return (
-    <button className="mt-5 px-2 py-1 bg-cyan-500  rounded-xl transition-colors hover:bg-cyan-300 hover:text-cyan-950 lg:text-lg">
+    <button className="mt-5 px-3 py-2 bg-cyan-500  rounded-xl transition-colors hover:bg-cyan-300 hover:text-cyan-950 lg:text-lg">
       <a
         className="flex  items-center"
         target="_blank"
