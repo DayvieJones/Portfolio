@@ -306,7 +306,7 @@ export default function IndexPage() {
           </div>
         </section>
         <footer className="relative bottom-0 py-4 mt-5 w-full bg-slate-950 text-center text-slate-400 text-sm">
-          <a href="./Portfolio/Impressum" className="mr-4">
+          <a href="./Impressum" className="mr-4">
             Impressum
           </a>
           <span>© David Johrden 2024</span>
