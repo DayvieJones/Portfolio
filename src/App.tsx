@@ -18,7 +18,7 @@ function App() {
         ],
       },
     ],
-    { basename: "/Portfolio" }
+    { basename: "/" }
   );
 
   return <RouterProvider router={router} />;
