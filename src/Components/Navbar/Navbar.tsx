@@ -21,7 +21,7 @@ export default function Navbar() {
   }, []);
 
   return (
-    <div className="flex ml-2 gap-3 text-lg lg:text-xl lg:gap-8 text-slate-300 z-30">
+    <div className="flex ml-2 gap-2 sm:gap-4 text-sm sm:text-lg md:gap-6 md:text-lg lg:text-xl lg:gap-8 text-slate-300 z-30">
       <div>
         <a
           href="#start"

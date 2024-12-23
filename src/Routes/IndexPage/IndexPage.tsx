@@ -16,17 +16,17 @@ export default function IndexPage() {
       <main className="flex flex-col">
         <section
           id="start"
-          className="container h-screen pt-32 px-6 lg:pt-80  mx-auto"
+          className="container h-screen pt-20 sm:pt-32 md:pt-32 px-6 lg:pt-80  mx-auto"
         >
-          <div className="flex flex-col text-slate-300 gap-32 justify-center items-center lg:flex-row lg:gap-40">
+          <div className="flex flex-col text-slate-300 md:gap-32 justify-center items-center lg:flex-row lg:gap-40">
             <div className="mx-5 px-5">
-              <h1 className="mb-4 text-4xl lg:text-6xl text-cyan-300 lg:mb-16">
+              <h1 className="mb-4 text-2xl md:text-4xl lg:text-6xl text-cyan-300 lg:mb-16">
                 Hey, ich bin David Johrden
               </h1>
-              <h2 className="mb-4 text-2xl lg:text-3xl text-cyan-100 lg:mb-12">
+              <h2 className="mb-4 text-xl md:text-2xl lg:text-3xl text-cyan-100 lg:mb-12">
                 {"<Frontend Developer/>"}
               </h2>
-              <p className="text-2xl text-cyan-400 mb-8 lg:mb-10">Sei gegrüßt</p>
+              <p className="text-xl md:text-2xl text-cyan-400 mb-8 lg:mb-10">Sei gegrüßt</p>
               <a
                 href="#about"
                 className="text-slate-100  bg-cyan-700 rounded-lg px-4 py-2 hover:bg-cyan-500 flex items-center justify-center lg:text-xl"
@@ -98,7 +98,7 @@ export default function IndexPage() {
             </div>
           </div>
           <div className=" lg:mt-20  flex flex-col bg-slate-600 mt-10 rounded-lg p-4 mx-auto border-4 border-double border-cyan-400 lg:w-[50%]">
-            <div className="text-2xl font-medium">{"< Tech Stack />"}</div>
+            <div className="text-2xl font-medium">{"<Tech Stack/>"}</div>
             <div className="flex flex-wrap gap-2 mt-4 ">
               <TechStack content={"HTML"} />
               <TechStack content={"CSS"} />
