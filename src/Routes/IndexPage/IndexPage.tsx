@@ -20,13 +20,13 @@ export default function IndexPage() {
         >
           <div className="flex flex-col text-slate-300 md:gap-32 justify-center items-center lg:flex-row lg:gap-40">
             <div className="mx-5 px-5">
-              <h1 className="mb-4 text-2xl md:text-4xl lg:text-6xl text-cyan-300 lg:mb-16">
+              <h1 className="mb-4 text-3xl md:text-4xl lg:text-6xl text-cyan-300 lg:mb-16">
                 Hey, ich bin David Johrden
               </h1>
-              <h2 className="mb-4 text-xl md:text-2xl lg:text-3xl text-cyan-100 lg:mb-12">
+              <h2 className="mb-4 text-2xl md:text-2xl lg:text-3xl text-cyan-100 lg:mb-12">
                 {"<Frontend Developer/>"}
               </h2>
-              <p className="text-xl md:text-2xl text-cyan-400 mb-8 lg:mb-10">Sei gegrüßt</p>
+              <p className="text-2xl md:text-2xl text-cyan-400 mb-8 lg:mb-10">Sei gegrüßt</p>
               <a
                 href="#about"
                 className="text-slate-100  bg-cyan-700 rounded-lg px-4 py-2 hover:bg-cyan-500 flex items-center justify-center lg:text-xl"
@@ -52,7 +52,7 @@ export default function IndexPage() {
               <img
                 src={techLogo}
                 alt="Meine Technologien"
-                className="w-full max-w-[500px] mx-auto"
+                className="w-[90%] lg:w-full max-w-[500px] mx-auto"
               />
             </div>
           </div>
