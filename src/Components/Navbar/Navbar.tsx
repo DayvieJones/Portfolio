@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { motion } from "motion/react";
 
 export default function Navbar() {
   const [activeSection, setActiveSection] = useState("");
@@ -21,7 +22,13 @@ export default function Navbar() {
   }, []);
 
   return (
-    <div className="flex ml-2 gap-2 sm:gap-4 text-sm sm:text-lg md:gap-6 md:text-lg lg:text-xl lg:gap-8 text-slate-300 z-30">
+    <motion.div
+      className="flex ml-2 gap-2 sm:gap-4 text-sm sm:text-lg md:gap-6 md:text-lg lg:text-xl lg:gap-8 text-slate-300 z-30"
+      style={{ overflow: "hidden", whiteSpace: "nowrap" }}
+      initial={{ width: 0 }}
+      animate={{ width: "100%" }}
+      transition={{ duration: 3.2, ease: "easeInOut" }}
+    >
       <div>
         <a
           href="#start"
@@ -70,6 +77,6 @@ export default function Navbar() {
           <span>Contact</span>
         </a>
       </div>
-    </div>
+    </motion.div>
   );
 }

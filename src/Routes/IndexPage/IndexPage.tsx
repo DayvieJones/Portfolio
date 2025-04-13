@@ -7,6 +7,8 @@ import weatherApp from "../../../public/weatherApp-prev.png";
 import Header from "../../Components/Header/Header";
 import TechStack from "../../Components/TechStack/TechStack";
 import Project from "../../Components/Project/Project";
+import { motion } from "motion/react";
+import { AnimatedText } from "../../Components/AnimatedText/AnimatedText";
 
 export default function IndexPage() {
   return (
@@ -20,18 +22,50 @@ export default function IndexPage() {
         >
           <div className="flex flex-col text-slate-300 md:gap-32 justify-center items-center lg:flex-row lg:gap-40">
             <div className="mx-5 px-5">
-              <h1 className="mb-4 text-3xl md:text-4xl lg:text-6xl text-cyan-300 lg:mb-16">
-                Hey, ich bin David Johrden
-              </h1>
-              <h2 className="mb-4 text-2xl md:text-2xl lg:text-3xl text-cyan-100 lg:mb-12">
+              <motion.h1 className="mb-4 text-3xl md:text-4xl lg:text-6xl text-cyan-300 lg:mb-16">
+                <AnimatedText
+                  text="Hey, ich bin David Johrden"
+                  once
+                  staggerChildren={0.05}
+                  animation={{}}
+                />
+              </motion.h1>
+              <motion.h2
+                className="mb-4 text-2xl md:text-2xl lg:text-3xl text-cyan-100 lg:mb-12"
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{
+                  duration: 0.9,
+                  delay: 1.5,
+                  ease: "easeOut",
+                }}
+              >
                 {"<Frontend Developer/>"}
-              </h2>
-              <p className="text-2xl md:text-2xl text-cyan-400 mb-8 lg:mb-10">Sei gegrüßt</p>
-              <a
+              </motion.h2>
+              <motion.p
+                className="text-2xl md:text-2xl text-cyan-400 mb-8 lg:mb-10"
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{
+                  duration: 0.9,
+                  delay: 1.8,
+                  ease: "easeOut",
+                }}
+              >
+                Greetings
+              </motion.p>
+              <motion.a
                 href="#about"
                 className="text-slate-100  bg-cyan-700 rounded-lg px-4 py-2 hover:bg-cyan-500 flex items-center justify-center lg:text-xl"
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{
+                  duration: 0.9,
+                  delay: 2,
+                  ease: "easeOut",
+                }}
               >
-                Über mich
+                About me
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -46,7 +80,7 @@ export default function IndexPage() {
                     d="M15.75 17.25 12 21m0 0-3.75-3.75M12 21V3"
                   ></path>
                 </svg>
-              </a>
+              </motion.a>
             </div>
             <div className="mt-10">
               <img
@@ -66,35 +100,76 @@ export default function IndexPage() {
           <div className="flex items-center mt-5 mb-6">
             <div className="w-[10%] h-[1px] bg-cyan-600"></div>
             <h2 className="text-4xl text-nowrap mx-5 text-cyan-300">
-              Das bin ich
+              That's me
             </h2>
             <div className="w-full h-[1px] bg-cyan-600"></div>
           </div>
           <div className="flex flex-col md:flex-row justify-center items-center md:gap-10 lg:mt-20">
-            <img
-              className="w-52 h-52 rounded-full p-4 mb-6 object-cover md:mb-0 w- md:w-60 md:h-60"
-              src={avatar}
-              alt="Profile picture"
-            />
+            <div className="border-4 rounded-full border-cyan-300 ">
+              <motion.img
+                src={avatar}
+                alt="Profile picture"
+                className="w-52 h-52 rounded-full p-4 mb-6 object-cover md:mb-0 md:w-60 md:h-60"
+                initial={{ filter: "blur(12px)", opacity: 1 }}
+                whileInView={{ filter: "blur(0px)", opacity: 1 }}
+                transition={{ duration: 2 }}
+                viewport={{ once: true, amount: 0.5 }}
+              />
+            </div>
+
             <div className="text-lg lg:w-[40%] text-slate-300">
-              <p className="mb-2">
-                Ich bin David Johrden, leidenschaftlicher Entwickler aus dem
-                schönen Rhein-Sieg-Kreis und wohne in der Stadt Troisdorf.
-              </p>
-              <p className="mb-4">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Reiciendis cupiditate enim nisi corrupti praesentium ut non
-                magni nihil tenetur sapiente explicabo animi accusantium ipsam,
-                magnam.
-              </p>
-              <p className="mb-3">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Reiciendis cupiditate enim nisi corrupti praesentium ut non
-                magni nihil tenetur sapiente explicabo animi accusantium ipsam,
-                magnam, distinctio necessitatibus quos illo ullam soluta dicta
-                quis ex qui vel. Quia unde neque hic ducimus aspernatur eius
-                iure sit. Architecto expedita velit libero tempora.
-              </p>
+              <AnimatedText
+                once
+                staggerChildren={0.005}
+                className="mb-2"
+                text={[
+                  "Ich bin David Johrden, leidenschaftlicher Entwickler aus dem",
+                  "schönen Rhein-Sieg-Kreis und bin technikbegeistert, seit ich",
+                  "denken kann. Schon während meiner Ausbildung elektrotechnischen",
+                  "Bereich hat mich es fasziniert, wie sich Mechanik, Elektronik",
+                  "und Software verbinden lassen. Heute arbeite ich als staatlich",
+                  "geprüfter Elektrotechniker im internationalen Maschinenbau – mit",
+                  "Fokus auf Automatisierung, SPS-Programmierung und der",
+                  "Inbetriebnahme komplexer Anlagen.",
+                  " ",
+                  "Neben dem Beruf habe ich mein Interesse für Webentwicklung",
+                  "entdeckt. Angefangen mit kleinen Experimenten auf dem Arduino,",
+                  "habe ich nach und nach HTML, CSS und JavaScript gelernt –",
+                  " mittlerweile setze ich eigene Projekte mit React, TypeScript und",
+                  "Tailwind um. Mein Portfolio zeigt, wie ich Technik gerne",
+                  "praktisch und kreativ verbinde.",
+                  "",
+                  "Ich mag klare Strukturen, technische Herausforderungen und das",
+                  "Gefühl, wenn etwas am Ende einfach funktioniert. Mein Ziel ist",
+                  "es, meine Kenntnisse in der Frontend-Entwicklung gezielt",
+                  "auszubauen und Anwendungen zu entwickeln, die durch sauberen",
+                  "Code, performant und nutzerorientiert sind.",
+                ]}
+              />
+              {/* <AnimatedText
+                once
+                className="mb-4"
+                staggerChildren={0.05}
+                text={[
+                  "Neben dem Beruf habe ich mein Interesse für Webentwicklung",
+                  "entdeckt. Angefangen mit kleinen Experimenten auf dem Arduino,",
+                  "habe ich nach und nach HTML, CSS und JavaScript gelernt –",
+                  " mittlerweile setze ich eigene Projekte mit React, TypeScript und",
+                  "Tailwind um. Mein Portfolio zeigt, wie ich Technik gerne",
+                  "praktisch und kreativ verbinde.",
+                ]}
+              />
+              <AnimatedText
+                once
+                className="mb-3"
+                text={[
+                  "Ich mag klare Strukturen, technische Herausforderungen und das",
+                  "Gefühl, wenn etwas am Ende einfach funktioniert. Mein Ziel ist",
+                  "es, meine Kenntnisse in der Frontend-Entwicklung gezielt",
+                  "auszubauen und Anwendungen zu entwickeln, die durch sauberen",
+                  "Code, die performant und nutzerorientiert sind.",
+                ]}
+              /> */}
             </div>
           </div>
           <div className=" lg:mt-20  flex flex-col bg-slate-600 mt-10 rounded-lg p-4 mx-auto border-4 border-double border-cyan-400 lg:w-[50%]">
@@ -129,7 +204,7 @@ export default function IndexPage() {
             </div>
             <div className="text-lg ">
               Hier finden Sie meine Projekte, die Ihnen einen Einblick in meine
-              Fähigkeiten geben kann.
+              Fähigkeiten gibt.
             </div>
             <div className="flex flex-wrap items-center justify-start gap-8">
               <Project

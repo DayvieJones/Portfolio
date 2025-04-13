@@ -1,3 +1,4 @@
+import { motion } from "motion/react";
 import CodeButton from "../CodeButton/CodeButton";
 import ProjectButton from "../ProjectButton/ProjectButton";
 import TechStack from "../TechStack/TechStack";
@@ -28,13 +29,20 @@ export default function Project({
   }
 
   return (
-    <div className="flex flex-col bg-slate-600 mt-10 p-3 border rounded-lg border-cyan-500 lg:w-[450px] w-96 lg:hover:scale-105 transition-all">
+    <motion.div
+      className="flex flex-col bg-slate-600 mt-8 px-4 py-2 border rounded-lg border-cyan-500 transition-all w-96 lg:w-[450px] lg:hover:scale-105"
+      initial={{ opacity: 0.08 - 500 }}
+      whileInView={{
+        opacity: 1,
+        transition: { duration: 0.8, once: true, ease: "easeOut" },
+      }}
+    >
       <div className="flex items-center gap-3 mb-3 ml-2">
         <h2 className="text-2xl lg:my-3 text-nowrap ">{projectTitle}</h2>
         <div className=" w-full h-[1px] bg-cyan-600"></div>
       </div>
       <div
-        className="w-full h-52 bg-top  bg-cover rounded-lg lg:mb-5 lg:hover:scale-110 lg:transition-transform lg:duration-[500ms]"
+        className="w-full h-52 bg-top  bg-cover rounded-lg lg:mb-5 lg:hover:scale-105 lg:transition-transform lg:duration-[500ms] border-2 border-cyan-300"
         style={{ backgroundImage: `url(${picturePreview})` }}
         role="img"
         aria-label={altText}
@@ -49,6 +57,6 @@ export default function Project({
         <ProjectButton projectButtonLink={projectLink} />
         <CodeButton codeButtonLink={githubLink} />
       </div>
-    </div>
+    </motion.div>
   );
 }
