@@ -1,4 +1,3 @@
-import techLogo from "../../../public/techs.png";
 import avatar from "../../../public/avatar.jpg";
 import sushiRestaurant from "../../../public/sushi-restaurant-prev.png";
 import noteApp from "../../../public/note-app-prev.png";
@@ -9,6 +8,7 @@ import TechStack from "../../Components/TechStack/TechStack";
 import Project from "../../Components/Project/Project";
 import { motion } from "motion/react";
 import { AnimatedText } from "../../Components/AnimatedText/AnimatedText";
+import AnimatedImage from "../../Components/AnimatedImage/AnimatedImage";
 
 export default function IndexPage() {
   return (
@@ -18,7 +18,7 @@ export default function IndexPage() {
       <main className="flex flex-col">
         <section
           id="start"
-          className="container h-screen pt-20 sm:pt-32 md:pt-32 px-6 lg:pt-80  mx-auto"
+          className="container h-screen pt-32 px-6 lg:pt-80  mx-auto"
         >
           <div className="flex flex-col text-slate-300 md:gap-32 justify-center items-center lg:flex-row lg:gap-40">
             <div className="mx-5 px-5">
@@ -52,7 +52,7 @@ export default function IndexPage() {
                   ease: "easeOut",
                 }}
               >
-                Greetings
+                Sei gegrüßt
               </motion.p>
               <motion.a
                 href="#about"
@@ -83,11 +83,7 @@ export default function IndexPage() {
               </motion.a>
             </div>
             <div className="mt-10">
-              <img
-                src={techLogo}
-                alt="Meine Technologien"
-                className="w-[90%] lg:w-full max-w-[500px] mx-auto"
-              />
+              <AnimatedImage />
             </div>
           </div>
         </section>
@@ -105,14 +101,14 @@ export default function IndexPage() {
             <div className="w-full h-[1px] bg-cyan-600"></div>
           </div>
           <div className="flex flex-col md:flex-row justify-center items-center md:gap-10 lg:mt-20">
-            <div className="border-4 rounded-full border-cyan-300 ">
+            <div className="border-2 rounded-full border-cyan-300 mb-4 p-1 sm:p-2 md:p-2">
               <motion.img
                 src={avatar}
                 alt="Profile picture"
-                className="w-52 h-52 rounded-full p-4 mb-6 object-cover md:mb-0 md:w-60 md:h-60"
+                className="w-48 h-48 sm:w-52 sm:h-52 md:w-60 md:h-60 rounded-full object-cover"
                 initial={{ filter: "blur(12px)", opacity: 1 }}
                 whileInView={{ filter: "blur(0px)", opacity: 1 }}
-                transition={{ duration: 2 }}
+                transition={{ duration: 2, once: true }}
                 viewport={{ once: true, amount: 0.5 }}
               />
             </div>
@@ -131,7 +127,7 @@ export default function IndexPage() {
                   "geprüfter Elektrotechniker im internationalen Maschinenbau – mit",
                   "Fokus auf Automatisierung, SPS-Programmierung und der",
                   "Inbetriebnahme komplexer Anlagen.",
-                  " ",
+                  "",
                   "Neben dem Beruf habe ich mein Interesse für Webentwicklung",
                   "entdeckt. Angefangen mit kleinen Experimenten auf dem Arduino,",
                   "habe ich nach und nach HTML, CSS und JavaScript gelernt –",
@@ -172,7 +168,15 @@ export default function IndexPage() {
               /> */}
             </div>
           </div>
-          <div className=" lg:mt-20  flex flex-col bg-slate-600 mt-10 rounded-lg p-4 mx-auto border-4 border-double border-cyan-400 lg:w-[50%]">
+          <motion.div
+            className=" lg:mt-20  flex flex-col bg-slate-600 mt-10 rounded-lg p-4 mx-auto border-4 border-double border-cyan-400 lg:w-[50%]"
+            initial={{ opacity: 0, scale: 0.85 }}
+            whileInView={{
+              opacity: 1,
+              scale: 1,
+              transition: { duration: 1, ease: "easeOut", once: true },
+            }}
+          >
             <div className="text-2xl font-medium">{"<Tech Stack/>"}</div>
             <div className="flex flex-wrap gap-2 mt-4 ">
               <TechStack content={"HTML"} />
@@ -186,7 +190,7 @@ export default function IndexPage() {
               <TechStack content={"React"} />
               <TechStack content={"VS-Code"} />
             </div>
-          </div>
+          </motion.div>
         </section>
 
         {/* Projects */}
