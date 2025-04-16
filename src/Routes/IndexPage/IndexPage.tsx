@@ -9,8 +9,6 @@ import Project from "../../Components/Project/Project";
 import { motion } from "motion/react";
 import { AnimatedText } from "../../Components/AnimatedText/AnimatedText";
 import AnimatedImage from "../../Components/AnimatedImage/AnimatedImage";
-import { ButtonShadcn } from "../../Components/ui/button";
-import { Link } from "react-router-dom";
 
 export default function IndexPage() {
   return (

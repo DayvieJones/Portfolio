@@ -1,8 +1,15 @@
+import { Link } from "react-router-dom";
+
 export default function Impressum() {
   return (
     <div className="bg-slate-900 text-white h-screen flex flex-col">
       {/* Zurück-Link */}
-      <a href="./#start" className="flex gap-2 m-4">
+      <Link
+        to={{ pathname: "../", hash: "#start" }}
+        preventScrollReset={true}
+        viewTransition
+        className="flex gap-2 m-4"
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -18,7 +25,7 @@ export default function Impressum() {
           ></path>
         </svg>
         Zurück
-      </a>
+      </Link>
 
       {/* Hauptinhalt */}
       <div className="text-center flex-grow">
