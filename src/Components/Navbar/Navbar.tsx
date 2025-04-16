@@ -27,7 +27,7 @@ export default function Navbar() {
       style={{ overflow: "hidden", whiteSpace: "nowrap" }}
       initial={{ width: 0 }}
       animate={{ width: "100%" }}
-      transition={{ duration: 3.2, ease: "easeInOut" }}
+      transition={{ duration: 1, ease: "easeInOut" }}
     >
       <div>
         <a

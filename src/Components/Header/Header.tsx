@@ -15,8 +15,8 @@ export default function Header() {
             initial={{ opacity: 0, y: -50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{
-              duration: 0.8,
-              delay: 1.5,
+              duration: 0.7,
+              delay: 0.4,
               ease: "easeOut",
             }}
           >
@@ -37,8 +37,8 @@ export default function Header() {
             initial={{ opacity: 0, y: -50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{
-              duration: 0.8,
-              delay: 2,
+              duration: 0.7,
+              delay: 0.6,
               ease: "easeOut",
             }}
           >
@@ -62,8 +62,8 @@ export default function Header() {
             initial={{ opacity: 0, y: -50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{
-              duration: 0.8,
-              delay: 2.2,
+              duration: 0.7,
+              delay: 0.8,
               ease: "easeOut",
             }}
           >

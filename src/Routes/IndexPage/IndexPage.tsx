@@ -9,6 +9,8 @@ import Project from "../../Components/Project/Project";
 import { motion } from "motion/react";
 import { AnimatedText } from "../../Components/AnimatedText/AnimatedText";
 import AnimatedImage from "../../Components/AnimatedImage/AnimatedImage";
+import { ButtonShadcn } from "../../Components/ui/button";
+import { Link } from "react-router-dom";
 
 export default function IndexPage() {
   return (
@@ -26,7 +28,7 @@ export default function IndexPage() {
                 <AnimatedText
                   text="Hey, ich bin David Johrden"
                   once
-                  staggerChildren={0.05}
+                  staggerChildren={0.03}
                   animation={{}}
                 />
               </motion.h1>
@@ -35,8 +37,8 @@ export default function IndexPage() {
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{
-                  duration: 0.9,
-                  delay: 1.5,
+                  duration: 0.7,
+                  delay: 0.2,
                   ease: "easeOut",
                 }}
               >
@@ -47,40 +49,42 @@ export default function IndexPage() {
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{
-                  duration: 0.9,
-                  delay: 1.8,
+                  duration: 0.7,
+                  delay: 0.4,
                   ease: "easeOut",
                 }}
               >
                 Sei gegrüßt
               </motion.p>
-              <motion.a
-                href="#about"
-                className="text-slate-100  bg-cyan-700 rounded-lg px-4 py-2 hover:bg-cyan-500 flex items-center justify-center lg:text-xl"
-                initial={{ opacity: 0, y: 50 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{
-                  duration: 0.9,
-                  delay: 2,
-                  ease: "easeOut",
-                }}
-              >
-                About me
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke-width="2"
-                  stroke="currentColor"
-                  className="w-5 h-5 ml-2 -mr-1"
+              <div className="flex flex-col w-1/4 mx-auto">
+                <motion.a
+                  href="#about"
+                  className="text-slate-100  bg-cyan-700 rounded-lg px-auto py-2 hover:bg-cyan-500 flex items-center justify-center lg:text-xl"
+                  initial={{ opacity: 0, y: 50 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{
+                    duration: 0.7,
+                    delay: 0.6,
+                    ease: "easeOut",
+                  }}
                 >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M15.75 17.25 12 21m0 0-3.75-3.75M12 21V3"
-                  ></path>
-                </svg>
-              </motion.a>
+                  About me
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="2"
+                    stroke="currentColor"
+                    className="w-5 h-5 mx-2 my-1"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M15.75 17.25 12 21m0 0-3.75-3.75M12 21V3"
+                    ></path>
+                  </svg>
+                </motion.a>
+              </div>
             </div>
             <div className="mt-10">
               <AnimatedImage />
@@ -116,8 +120,8 @@ export default function IndexPage() {
             <div className="text-lg lg:w-[40%] text-slate-300">
               <AnimatedText
                 once
-                staggerChildren={0.005}
-                className="mb-2"
+                staggerChildren={0.001}
+                className="mb-3"
                 text={[
                   "Ich bin David Johrden, leidenschaftlicher Entwickler aus dem",
                   "schönen Rhein-Sieg-Kreis und bin technikbegeistert, seit ich",
@@ -142,30 +146,6 @@ export default function IndexPage() {
                   "Code, performant und nutzerorientiert sind.",
                 ]}
               />
-              {/* <AnimatedText
-                once
-                className="mb-4"
-                staggerChildren={0.05}
-                text={[
-                  "Neben dem Beruf habe ich mein Interesse für Webentwicklung",
-                  "entdeckt. Angefangen mit kleinen Experimenten auf dem Arduino,",
-                  "habe ich nach und nach HTML, CSS und JavaScript gelernt –",
-                  " mittlerweile setze ich eigene Projekte mit React, TypeScript und",
-                  "Tailwind um. Mein Portfolio zeigt, wie ich Technik gerne",
-                  "praktisch und kreativ verbinde.",
-                ]}
-              />
-              <AnimatedText
-                once
-                className="mb-3"
-                text={[
-                  "Ich mag klare Strukturen, technische Herausforderungen und das",
-                  "Gefühl, wenn etwas am Ende einfach funktioniert. Mein Ziel ist",
-                  "es, meine Kenntnisse in der Frontend-Entwicklung gezielt",
-                  "auszubauen und Anwendungen zu entwickeln, die durch sauberen",
-                  "Code, die performant und nutzerorientiert sind.",
-                ]}
-              /> */}
             </div>
           </div>
           <motion.div
@@ -174,7 +154,7 @@ export default function IndexPage() {
             whileInView={{
               opacity: 1,
               scale: 1,
-              transition: { duration: 1, ease: "easeOut", once: true },
+              transition: { duration: 0.7, ease: "easeOut", once: true },
             }}
           >
             <div className="text-2xl font-medium">{"<Tech Stack/>"}</div>

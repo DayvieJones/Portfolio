@@ -35,7 +35,7 @@ export const AnimatedText = ({
   staggerChildren,
 }: AnimatedTextProps) => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { amount: 0.5, once });
+  const isInView = useInView(ref, { amount: 0.3, once });
   const textArray = Array.isArray(text) ? text : [text];
   const animations = createAnimations(animation);
 
@@ -50,7 +50,7 @@ export const AnimatedText = ({
         variants={{
           visible: {
             transition: {
-              staggerChildren: staggerChildren ?? 0.02,
+              staggerChildren: staggerChildren ?? 0.01,
             },
           },
           hidden: {},
