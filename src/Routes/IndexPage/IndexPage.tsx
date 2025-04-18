@@ -9,6 +9,7 @@ import Project from "../../Components/Project/Project";
 import { motion } from "motion/react";
 import { AnimatedText } from "../../Components/AnimatedText/AnimatedText";
 import AnimatedImage from "../../Components/AnimatedImage/AnimatedImage";
+import { Link } from "react-router-dom";
 
 export default function IndexPage() {
   return (
@@ -363,10 +364,10 @@ export default function IndexPage() {
           </div>
         </section>
         <footer className="relative bottom-0 py-4 mt-5 w-full bg-slate-950 text-center text-slate-400 text-sm">
-          <a href="./Impressum" className="mr-4">
+          <Link to="./Impressum" className="mr-4">
             Impressum
-          </a>
-          <span>© David Johrden 2024</span>
+          </Link>
+          <span>© David Johrden 2025</span>
         </footer>
       </main>
     </div>

@@ -44,10 +44,10 @@ export default function Impressum() {
       </div>
       {/* Footer */}
       <div className="bg-slate-950 px-6 text-center py-4 text-slate-400 text-sm">
-        <a href="./Impressum" className="mr-4">
+        <Link to="./Impressum" className="mr-4">
           Impressum
-        </a>
-        <span>© David Johrden 2024</span>
+        </Link>
+        <span>© David Johrden 2025</span>
       </div>
     </div>
   );
