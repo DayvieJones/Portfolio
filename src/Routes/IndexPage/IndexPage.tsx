@@ -1,7 +1,9 @@
 import avatar from "../../../public/avatar.jpg";
 import sushiRestaurant from "../../../public/sushi-restaurant-prev.png";
+import LANagement from "../../../public/lanagement-prev.png";
 import noteApp from "../../../public/note-app-prev.png";
 import userAdministration from "../../../public/user-administration-prev.png";
+import calculator from "../../../public/calculator-prev.png";
 import weatherApp from "../../../public/weatherApp-prev.png";
 import Header from "../../Components/Header/Header";
 import TechStack from "../../Components/TechStack/TechStack";
@@ -55,7 +57,7 @@ export default function IndexPage() {
               >
                 Sei gegrüßt
               </motion.p>
-              <div className="flex flex-col w-1/4 mx-auto">
+              <div className="flex flex-col lg:w-1/4 md:w-1/2 mx-auto">
                 <motion.a
                   href="#about"
                   className="text-slate-100  bg-cyan-700 rounded-lg px-auto py-2 hover:bg-cyan-500 flex items-center justify-center lg:text-xl"
@@ -134,7 +136,7 @@ export default function IndexPage() {
                   "Neben dem Beruf habe ich mein Interesse für Webentwicklung",
                   "entdeckt. Angefangen mit kleinen Experimenten auf dem Arduino,",
                   "habe ich nach und nach HTML, CSS und JavaScript gelernt –",
-                  " mittlerweile setze ich eigene Projekte mit React, TypeScript und",
+                  "mittlerweile setze ich eigene Projekte mit React, TypeScript und",
                   "Tailwind um. Mein Portfolio zeigt, wie ich Technik gerne",
                   "praktisch und kreativ verbinde.",
                   "",
@@ -149,11 +151,11 @@ export default function IndexPage() {
           </div>
           <motion.div
             className=" lg:mt-20  flex flex-col bg-slate-600 mt-10 rounded-lg p-4 mx-auto border-4 border-double border-cyan-400 lg:w-[50%]"
-            initial={{ opacity: 0, scale: 0.85 }}
+            initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{
               opacity: 1,
               scale: 1,
-              transition: { duration: 0.7, ease: "easeOut", once: true },
+              transition: { duration: 0.6, ease: "easeOut", once: true },
             }}
           >
             <div className="text-2xl font-medium">{"<Tech Stack/>"}</div>
@@ -168,6 +170,8 @@ export default function IndexPage() {
               <TechStack content={"npm"} />
               <TechStack content={"React"} />
               <TechStack content={"VS-Code"} />
+              <TechStack content={"Supabase"} />
+              <TechStack content={"Motion"} />
             </div>
           </motion.div>
         </section>
@@ -201,6 +205,7 @@ export default function IndexPage() {
                 altText={"Vorschaubild Sushi Restaurant"}
                 techStack={{ tech1: "HTML", tech2: "CSS" }}
               />
+
               <Project
                 projectTitle={"Notiz App"}
                 textContent={
@@ -227,6 +232,22 @@ export default function IndexPage() {
                   tech3: "JavaScript",
                 }}
               />
+
+              <Project
+                projectTitle={"Calculator"}
+                textContent={
+                  "Der Calculator orientiert sich am klassischen Windows-Taschenrechner und bietet grundlegende Rechenfunktionen in einem übersichtlichen Layout. Der Fokus liegt auf der Umsetzung mit JavaScript, wobei die Anwendung logische Operatoren, Zahlenverarbeitung und Event-Handling demonstriert. Dieses Projekt zeigt die effektive Anwendung von Vanilla JavaScript für interaktive Benutzeroberflächen."
+                }
+                picturePreview={calculator}
+                githubLink={"https://github.com/DayvieJones/calculator"}
+                projectLink={"https://dayviejones.github.io/calculator/"}
+                altText={"Vorschaubild Calculator"}
+                techStack={{
+                  tech1: "HTML",
+                  tech2: "CSS",
+                  tech3: "JavaScript",
+                }}
+              />
               <Project
                 projectTitle={"Nutzer Verwaltung"}
                 textContent={
@@ -237,7 +258,7 @@ export default function IndexPage() {
                 projectLink={
                   "https://dayviejones.github.io/userAdministration/"
                 }
-                altText={"Vorschaubild Nutzer Verwalung"}
+                altText={"Vorschaubild Nutzerverwaltung"}
                 techStack={{
                   tech1: "HTML",
                   tech2: "CSS",
@@ -245,6 +266,26 @@ export default function IndexPage() {
                   tech4: "TypeScript",
                   tech5: "React",
                   tech6: "Router",
+                }}
+              />
+              <Project
+                projectTitle={"LANagement"}
+                textContent={
+                  "Das LANagement Tool vereinfacht die Organisation von LAN-Partys durch ein zentrales Dashboard, über das sich Teilnehmende digital zu Matches anmelden können. Entwickelt mit React und Supabase, bietet es eine effiziente Benutzerverwaltung und Authentifizierung. Match-Dashboard und Statusanzeige demonstrieren den gezielten Einsatz moderner Frontend-Technologien."
+                }
+                disabled={true}
+                picturePreview={LANagement}
+                githubLink={"https://github.com/DayvieJones/"}
+                projectLink={"https://dayviejones.github.io/"}
+                altText={"Vorschaubild LANagement"}
+                techStack={{
+                  tech1: "HTML",
+                  tech2: "CSS",
+                  tech3: "JavaScript",
+                  tech4: "TypeScript",
+                  tech5: "React",
+                  tech6: "Router",
+                  tech7: "Supabase",
                 }}
               />
             </div>

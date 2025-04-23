@@ -3,7 +3,7 @@ import Navbar from "../Navbar/Navbar";
 
 export default function Header() {
   return (
-    <div className="flex fixed top-0 z-30  bg-black w-full h-20 bg-opacity-10 backdrop-blur-lg items-center ">
+    <div className="flex fixed top-0 z-30  bg-black w-full h-20 bg-opacity-10 backdrop-blur-lg items-center select-none">
       <div className="flex w-full justify-between items-center px-3">
         <div className="flex lg:ml-10">
           <Navbar />

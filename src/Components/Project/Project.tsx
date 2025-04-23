@@ -11,6 +11,7 @@ interface ProjectInterface {
   githubLink: string;
   projectLink: string;
   techStack?: { [key: string]: string };
+  disabled?: boolean;
 }
 
 export default function Project({
@@ -21,6 +22,7 @@ export default function Project({
   githubLink,
   projectLink,
   techStack = {},
+  disabled,
 }: ProjectInterface) {
   function renderTechStack(techStack: { [key: string]: string }) {
     return Object.keys(techStack).map((key) => (
@@ -30,7 +32,10 @@ export default function Project({
 
   return (
     <motion.div
-      className="flex flex-col bg-slate-600 mt-8 px-4 py-2 border rounded-lg border-cyan-500 transition-all w-96 lg:w-[450px] lg:hover:scale-105"
+      // className="flex flex-col bg-slate-600 mt-8 px-4 py-2 border rounded-lg border-cyan-500 transition-all w-96 lg:w-[450px] lg:hover:scale-105"
+      className={`flex flex-col bg-slate-600 mt-8 px-4 py-2 border rounded-lg border-cyan-500 transition-all lg:h-[48rem] w-96 lg:w-[450px] lg:hover:scale-105  ${
+        disabled ? "blur-sm opacity-90 pointer-events-none select-none" : ""
+      }`}
       initial={{ opacity: 0.08 - 500 }}
       whileInView={{
         opacity: 1,
@@ -54,8 +59,8 @@ export default function Project({
       </div>
       <p className="lg:text-lg lg:mb-5">{textContent}</p>
       <div className="flex gap-4 mr-3 mb-1 items-center justify-end">
-        <ProjectButton projectButtonLink={projectLink} />
-        <CodeButton codeButtonLink={githubLink} />
+        <ProjectButton projectButtonLink={projectLink} disabled={disabled} />
+        <CodeButton codeButtonLink={githubLink} disabled={disabled} />
       </div>
     </motion.div>
   );
