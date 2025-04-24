@@ -32,7 +32,6 @@ export default function Project({
 
   return (
     <motion.div
-      // className="flex flex-col bg-slate-600 mt-8 px-4 py-2 border rounded-lg border-cyan-500 transition-all w-96 lg:w-[450px] lg:hover:scale-105"
       className={`flex flex-col bg-slate-600 mt-8 px-4 py-2 border rounded-lg border-cyan-500 transition-all lg:h-[48rem] w-96 lg:w-[450px] lg:hover:scale-105  ${
         disabled ? "blur-sm opacity-90 pointer-events-none select-none" : ""
       }`}

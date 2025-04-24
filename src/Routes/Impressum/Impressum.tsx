@@ -43,12 +43,12 @@ export default function Impressum() {
         <p>E-Mail: david.johrden@gmail.com</p>
       </div>
       {/* Footer */}
-      <div className="bg-slate-950 px-6 text-center py-4 text-slate-400 text-sm">
-        <Link to="./Impressum" className="mr-4">
+      <footer className="relative bottom-0 py-4 mt-5 w-full bg-slate-950 text-center text-slate-400 text-sm">
+        <Link to="/Impressum" className="mr-4">
           Impressum
         </Link>
         <span>© David Johrden 2025</span>
-      </div>
+      </footer>
     </div>
   );
 }
