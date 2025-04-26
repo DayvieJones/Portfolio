@@ -11,7 +11,7 @@ export default function TechStack({ content }: TechStackInterface) {
       <img
         className="w-5 h-5 mr-2"
         src={`./${imgPath}-logo.svg`}
-        alt={`${content} ogo`}
+        alt={`${content} Logo`}
       />
       {content}
     </p>

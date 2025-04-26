@@ -269,11 +269,10 @@ export default function IndexPage() {
                 }}
               />
               <Project
-                projectTitle={"LANagement"}
+                projectTitle={"LANagement (Work in Progress)"}
                 textContent={
                   "Das LANagement Tool vereinfacht die Organisation von LAN-Partys durch ein zentrales Dashboard, über das sich Teilnehmende digital zu Matches anmelden können. Entwickelt mit React und Supabase, bietet es eine effiziente Benutzerverwaltung und Authentifizierung. Match-Dashboard und Statusanzeige demonstrieren den gezielten Einsatz moderner Frontend-Technologien."
                 }
-                disabled={true}
                 picturePreview={LANagement}
                 githubLink={"https://github.com/DayvieJones/"}
                 projectLink={"https://dayviejones.github.io/"}
@@ -286,6 +285,7 @@ export default function IndexPage() {
                   tech5: "React",
                   tech6: "Router",
                   tech7: "Supabase",
+                  tech8: "Motion",
                 }}
               />
             </div>
