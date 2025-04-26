@@ -11,7 +11,7 @@ export default function DraggableImage() {
     <motion.img
       src={techLogo}
       alt="Meine Technologien"
-      className="w-[90%] lg:w-full max-w-[500px] mx-auto cursor-grab"
+      className="w-[90%] lg:w-full max-w-[525px] mx-auto cursor-grab"
       initial={{ opacity: 0, scale: 0.95 }}
       whileInView={{
         opacity: 1,
